@@ -14,20 +14,17 @@ public class GoogleSteps extends ScenarioSteps {
   }
 
   @Step
-
   public void openPage() {
     page.open();
 
   }
 
   @Step
-
   public void searchForKeyword(String keyword) {
     page.search(keyword.toLowerCase());
   }
 
   @Step
-
   public boolean findInResults(String keyword) {
     return page.getSearchResult()
         .stream()

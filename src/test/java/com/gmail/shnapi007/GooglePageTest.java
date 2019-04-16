@@ -12,17 +12,17 @@ public class GooglePageTest {
   @Steps
   GoogleSteps gs;
 
-  @Given("the user accesses the google landing page")
+  @Given("Accesses the google page")
   public void create() {
     gs.openPage();
   }
 
-  @When("when they type in $keyword")
+  @When("When they type in $keyword")
   public void getRez(String keyword) {
     gs.searchForKeyword(keyword);
   }
 
-  @Then("we should see $keyword")
+  @Then("We should see $keyword")
   public void validate(String keyword) {
     Assert.isTrue(gs.findInResults(keyword), keyword + " is absent");
   }
