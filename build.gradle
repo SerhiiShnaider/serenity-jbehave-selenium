@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.40")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.48")
     }
 }
 plugins {
@@ -30,23 +30,10 @@ dependencies {
 }
 
 
-//https://stackoverflow.com/questions/37351246/how-do-i-run-serenity-web-tests-in-parallel-with-gradle
-//task runAParallelSuite(type: Test) {
-//    def forks = 2
-//    println "The Maximum parallel is $forks"
-    // uncomment maxParallelForks if you prefer to use the Gradle process forker
-    // which also requires a complete change of how the suite class works
-//    maxParallelForks = forks
-//    include '**/**TestSuite.class'
-    // testReportDir = file("${reporting.baseDir}/AParallelSuite")
-    // testResultsDir = file("${buildDir}/test-results/AParallelSuite")
-    // show standard out and standard error of the test JVM(s) on the console
-//    testLogging.showStandardStreams = true
-//}
-
 test {
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
+    maxParallelForks = Runtime.runtime.availableProcessors()
 }
 
 

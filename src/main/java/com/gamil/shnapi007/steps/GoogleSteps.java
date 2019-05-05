@@ -1,4 +1,4 @@
-package com.gmail.shnapi007.steps;
+package com.gamil.shnapi007.steps;
 
 import com.gamil.shnapi007.pages.GooglePage;
 import net.thucydides.core.annotations.Step;

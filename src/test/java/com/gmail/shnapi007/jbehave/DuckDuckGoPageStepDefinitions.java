@@ -1,12 +1,12 @@
-package com.gmail.shnapi007;
+package com.gmail.shnapi007.jbehave;
 
-import com.gmail.shnapi007.steps.DuckDuckGoSteps;
+import com.gamil.shnapi007.steps.DuckDuckGoSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.springframework.util.Assert;
 
-public class DuckDuckGoPageTest {
+public class DuckDuckGoPageStepDefinitions {
 
   @Steps
   DuckDuckGoSteps gs;
