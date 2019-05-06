@@ -1,13 +1,13 @@
-package com.gmail.shnapi007;
+package com.gmail.shnapi007.jbehave;
 
-import com.gmail.shnapi007.steps.GoogleSteps;
+import com.gamil.shnapi007.steps.GoogleSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import org.springframework.util.Assert;
 
-public class GooglePageTest {
+public class GooglePageStepDefinitions {
 
   @Steps
   GoogleSteps gs;
